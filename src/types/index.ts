@@ -4,8 +4,11 @@ export interface ProductVariant {
   label: string;
   swatch: string;
 }
+export type StepId = "cameras" | "plan" | "sensors" | "accessories";
+
 export interface Product {
   id: string;
+  stepId: StepId;
   Productcategory: Productcategory;
   name: string;
   description?: string;
@@ -13,7 +16,6 @@ export interface Product {
   image: string;
   badge?: string;
   price: number;
-  category: Productcategory;
   oldprice?: number;
   priceUnit?: "each" | "month";
   variants?: ProductVariant[];
